@@ -31,11 +31,9 @@ public class ProcessText {
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
         List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
-
         for (CoreMap sentence : sentences) {
             // traversing the words in the current sentence
             // a CoreLabel is a CoreMap with additional token-specific methods
-            result.setSentenceCount(sentences.size());
             for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
                 // this is the text of the token
                 String word = token.get(CoreAnnotations.TextAnnotation.class);
@@ -54,9 +52,12 @@ public class ProcessText {
 
 
         }
+        result.setSentenceCount(sentences.size());
         result.setWordCount(wordCount);
         result.setNounCount(nounCount);
         result.setVerbCount(verbCount);
+
+        //Console output for reference
         System.out.println(String.format("Number of sentences : "+result.getSentenceCount()));
         System.out.println(String.format("Number of words : "+wordCount));
         System.out.println(String.format("Number of nouns : "+nounCount));

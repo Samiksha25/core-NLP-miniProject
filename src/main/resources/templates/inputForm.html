@@ -1,21 +1,14 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Input Text to evaluate</title>
-    <meta charset="UTF-8">
+    <title>Input Text Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-
-<h1>Add User</h1>
-
+<h1>Form</h1>
 <form action="#" th:action="@{/getInput}" th:object="${result}" method="post">
-    <p>
-        Name: <input type="text" th:field="*{text}">
-    </p>
-    <p>
-        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
-    </p>
+    <p>Input Text: <input type="text" th:field="*{text}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
-
 </body>
 </html>

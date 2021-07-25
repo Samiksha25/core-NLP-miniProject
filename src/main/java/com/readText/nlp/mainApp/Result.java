@@ -1,60 +1,50 @@
 package com.readText.nlp.mainApp;
 
 public class Result {
-    private static int wordCount=0;
-    private static int sentenceCount=0;
-    private static int nounCount=0;
-    private static int verbCount=0;
-    private static String text;
-    private static int id = 0;
-
-    public static int getWordCount() {
+    public int getWordCount() {
         return wordCount;
     }
 
-    public static void setWordCount(int wordCount) {
-        Result.wordCount = wordCount;
+    public void setWordCount(int wordCount) {
+        this.wordCount = wordCount;
     }
 
-    public static int getSentenceCount() {
+    public int getSentenceCount() {
         return sentenceCount;
     }
 
-    public static void setSentenceCount(int sentenceCount) {
-        Result.sentenceCount = sentenceCount;
+    public void setSentenceCount(int sentenceCount) {
+        this.sentenceCount = sentenceCount;
     }
 
-    public static int getNounCount() {
+    public int getNounCount() {
         return nounCount;
     }
 
-    public static void setNounCount(int nounCount) {
-        Result.nounCount = nounCount;
+    public void setNounCount(int nounCount) {
+        this.nounCount = nounCount;
     }
 
-    public static int getVerbCount() {
+    public int getVerbCount() {
         return verbCount;
     }
 
-    public static void setVerbCount(int verbCount) {
-        Result.verbCount = verbCount;
+    public void setVerbCount(int verbCount) {
+        this.verbCount = verbCount;
     }
 
-    public static String getText() {
+    public String getText() {
         return text;
     }
 
-    public static void setText(String text) {
-        Result.text = text;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Result.id = id;
-    }
-
+    private int wordCount=0;
+    private int sentenceCount=0;
+    private int nounCount=0;
+    private int verbCount=0;
+    private String text;
 
 }
