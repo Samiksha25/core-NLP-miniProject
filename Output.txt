@@ -1,0 +1,5 @@
+ Text Analysis Report: 
+ Sentence Count: 3
+ Word Count: 3
+ Noun Count: 3
+ Verb Count: 3

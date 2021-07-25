@@ -9,15 +9,21 @@ import edu.stanford.nlp.util.CoreMap;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * Class to process the input text data
+ */
 public class ProcessText {
     private static int nounCount=0;
     private static int verbCount=0;
     private static int wordCount=0;
 
-    public static void main(String[] args){
-
-    }
-
+    /**
+     * Called by the MainController's getOutput method.
+     * Takes Result object as input and processes the text using Standford Core NLP functions
+     * to get sentence count, word count, noun count and verb count and finally set the values
+     * of the result object.
+     * @param result the Result object
+     */
     public static void analyzeText(Result result){
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, parse");

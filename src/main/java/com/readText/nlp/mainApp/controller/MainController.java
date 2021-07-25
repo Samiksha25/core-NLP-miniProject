@@ -9,20 +9,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 
-   /* @PostMapping(path="/getInput")
-    public @ResponseBody
-    ResponseEntity<ProcessText> getInput(@RequestParam String text) {
-        ProcessText processText = new ProcessText();
-        Result result=new Result();
-        processText.analyzeText(result);
-        return new ResponseEntity<ProcessText>(processText, HttpStatus.OK);
-    }*/
-
+    /**
+     * Takes input from user in text form and submits calls /getOutput
+     * @param result Object of result class
+     * @return returns the html page
+     */
     @GetMapping("/getInput")
     public String getInput(Result result) {
         return "inputForm.html";
     }
 
+    /**
+     * Takes the text and processes it using the ProcessText class function
+     * and displays the output on web.
+     * @param result Object of result class
+     * @return returns the html page
+     */
     @PostMapping("/getOutput")
     public String getOutput(Result result) {
         ProcessText processText=new ProcessText();
