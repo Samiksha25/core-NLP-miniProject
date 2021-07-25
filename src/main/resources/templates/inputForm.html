@@ -1,14 +1,22 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Input Text Form</title>
+    <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["textField"].value;
+          if (x == "" || x == null) {
+            alert("Text must be filled out.");
+            return false;
+          }
+        }
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Form</h1>
-<form action="#" th:action="@{/getInput}" th:object="${result}" method="post">
-    <p>Input Text: <input type="text" th:field="*{text}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+<h2>Input text to analyze the text.</h2>
+<form action="#" name="myForm" th:action="@{/getInput}" th:object="${result}" method="post">
+    <p>Input Text: <input type="text" th:field="*{text}" name="textField"/></p>
+    <button type="submit" formaction="/getOutput" onsubmit="return validateForm()">Submit to output</button>
 </form>
 </body>
 </html>

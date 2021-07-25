@@ -1,17 +1,15 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title>Show Result</title>
-  <meta charset="UTF-8">
-</head>
+  <html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
 <body>
+<h2>Results are below</h2>
 
-<h1>NLP Result</h1>
-
-<p th:text="'Sentence Count: ' + ${processText.sentenceCount}"></p>
-<p th:text="'Word Count: ' + ${processText.wordCOunt}"></p>
-<p th:text="'Noun Count: ' + ${processText.nounCount}"></p>
-<p th:text="'Verb Count: ' + ${processText.verbCount}"></p>
+  <p th:text="'Sentence Count: ' + ${result.sentenceCount}"></p>
+  <p th:text="'Word Count: ' + ${result.wordCount}"></p>
+  <p th:text="'Noun Count: ' + ${result.nounCount}"></p>
+  <p th:text="'Verb Count: ' + ${result.verbCount}"></p>
 
 </body>
 </html>

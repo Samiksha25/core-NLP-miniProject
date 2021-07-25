@@ -1,8 +1,10 @@
 package com.readText.nlp.mainApp.controller;
 
+import com.readText.nlp.mainApp.ProcessText;
 import com.readText.nlp.mainApp.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
@@ -19,6 +21,13 @@ public class MainController {
     @GetMapping("/getInput")
     public String getInput(Result result) {
         return "inputForm.html";
+    }
+
+    @PostMapping("/getOutput")
+    public String getOutput(Result result) {
+        ProcessText processText=new ProcessText();
+        processText.analyzeText(result);
+        return "outputForm.html";
     }
 
 }
