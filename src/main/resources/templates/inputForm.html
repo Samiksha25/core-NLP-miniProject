@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Input Text to evaluate</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Add User</h1>
+
+<form action="#" th:action="@{/api/takeinput}" th:object="${text}" method="post">
+    <p>
+        Name: <input type="text" th:field="*{text}">
+    </p>
+    <p>
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+    </p>
+</form>
+
+</body>
+</html>

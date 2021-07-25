@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Show Result</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>NLP Result</h1>
+
+<p th:text="'Sentence Count: ' + ${processText.sentenceCount}"></p>
+<p th:text="'Word Count: ' + ${processText.wordCOunt}"></p>
+<p th:text="'Noun Count: ' + ${processText.nounCount}"></p>
+<p th:text="'Verb Count: ' + ${processText.verbCount}"></p>
+
+</body>
+</html>
