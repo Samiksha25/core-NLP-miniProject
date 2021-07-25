@@ -1,4 +1,5 @@
 package com.readText.nlp.mainApp;
+
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -16,10 +17,12 @@ public class ProcessText {
     private static String text;
 
     public static void main(String[] args){
+    }
+
+    public static void analyzeText(){
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, parse");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-
         // create an empty Annotation just with the given text
         Annotation document = new Annotation(text);
 

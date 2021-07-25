@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.*;
 public class MainController {
 
     @PostMapping(path="/getInput")
-    public @ResponseBody String getInput(@RequestParam String text) {
+    public @ResponseBody ProcessText getInput(@RequestParam String text) {
         ProcessText processText = new ProcessText();
         processText.setText(text);
-        return "Input complete";
+        processText.analyzeText();
+        return processText;
     }
+
 
 }
