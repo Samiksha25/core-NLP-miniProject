@@ -10,21 +10,20 @@ import java.util.List;
 import java.util.Properties;
 
 public class ProcessText {
-    private static int wordCount=0;
-    private static int sentenceCount=0;
     private static int nounCount=0;
     private static int verbCount=0;
-    private static String text;
+    private static int wordCount=0;
 
     public static void main(String[] args){
+
     }
 
-    public static void analyzeText(){
+    public static void analyzeText(Result result){
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, parse");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         // create an empty Annotation just with the given text
-        Annotation document = new Annotation(text);
+        Annotation document = new Annotation(result.getText());
 
         // run all Annotators on this text
         pipeline.annotate(document);
@@ -36,7 +35,7 @@ public class ProcessText {
         for (CoreMap sentence : sentences) {
             // traversing the words in the current sentence
             // a CoreLabel is a CoreMap with additional token-specific methods
-            sentenceCount= sentences.size();
+            result.setSentenceCount(sentences.size());
             for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
                 // this is the text of the token
                 String word = token.get(CoreAnnotations.TextAnnotation.class);
@@ -55,49 +54,13 @@ public class ProcessText {
 
 
         }
-        System.out.println(String.format("Number of sentences : "+sentenceCount));
+        result.setWordCount(wordCount);
+        result.setNounCount(nounCount);
+        result.setVerbCount(verbCount);
+        System.out.println(String.format("Number of sentences : "+result.getSentenceCount()));
         System.out.println(String.format("Number of words : "+wordCount));
         System.out.println(String.format("Number of nouns : "+nounCount));
         System.out.println(String.format("Number of verbs : "+verbCount));
     }
-    public String getText() {
-        return text;
-    }
 
-    public void setText(String text) {
-        this.text = text;
-        System.out.println(String.format("Input text is: [%s]",this.text));
-    }
-
-    public static int getWordCount() {
-        return wordCount;
-    }
-
-    public static void setWordCount(int wordCount) {
-        ProcessText.wordCount = wordCount;
-    }
-
-    public static int getSentenceCount() {
-        return sentenceCount;
-    }
-
-    public static void setSentenceCount(int sentenceCount) {
-        ProcessText.sentenceCount = sentenceCount;
-    }
-
-    public static int getNounCount() {
-        return nounCount;
-    }
-
-    public static void setNounCount(int nounCount) {
-        ProcessText.nounCount = nounCount;
-    }
-
-    public static int getVerbCount() {
-        return verbCount;
-    }
-
-    public static void setVerbCount(int verbCount) {
-        ProcessText.verbCount = verbCount;
-    }
 }

@@ -8,7 +8,7 @@
 
 <h1>Add User</h1>
 
-<form action="#" th:action="@{/api/takeinput}" th:object="${text}" method="post">
+<form action="#" th:action="@{/getInput}" th:object="${result}" method="post">
     <p>
         Name: <input type="text" th:field="*{text}">
     </p>
