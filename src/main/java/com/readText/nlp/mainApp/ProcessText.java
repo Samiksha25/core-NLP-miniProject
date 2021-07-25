@@ -63,6 +63,7 @@ public class ProcessText {
 
     public void setText(String text) {
         this.text = text;
+        System.out.println(String.format("Input text is: [%s]",this.text));
     }
 
     public static int getWordCount() {
