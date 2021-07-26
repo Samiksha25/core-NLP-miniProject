@@ -16,3 +16,19 @@ Step 1: Run the SpringBoot application.
 Step 2: On your browser type "http://localhost:9090/getInput".
 Step 3: Input your text to analyse and click "Submit".
 STep 4: Output is displayed on the browser.
+
+Output Evidence:
+Front-end Input Form:
+![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Front-end%20Input.PNG)
+
+Front-end Output Form: 
+![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Front-end%20Output.PNG)
+
+Front-end Empty TextArea Validation Form: 
+![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Front-end%20Validation.PNG)
+
+Text File Output: 
+![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Text%20file%20Output.PNG)
+
+COnsole Output:
+![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Console%20Output.PNG)
