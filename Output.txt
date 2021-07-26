@@ -1,5 +1,13 @@
- Text Analysis Report: 
- Sentence Count: 3
- Word Count: 3
- Noun Count: 3
- Verb Count: 3
+Text Analysis Report: 
+ 
+Text analysed : My name is Mary and I stay in Dubai.
+My sister's name is Kate and she stays in Germany.
+My mother's name is Catherine and she stays in Paris.
+My grandmother's name is Katy and she stays in Arizona.
+
+ 
+ 
+Sentence Count: 4
+Word Count: 46
+Noun Count: 15
+Verb Count: 8

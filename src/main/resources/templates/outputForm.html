@@ -3,9 +3,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
-<body>
-<h2>Results are below</h2>
 
+<body>
+<h3>Results are below</h3>
+  <p th:text="'Text analysed: ' + ${result.text}"></p>
   <p th:text="'Sentence Count: ' + ${result.sentenceCount}"></p>
   <p th:text="'Word Count: ' + ${result.wordCount}"></p>
   <p th:text="'Noun Count: ' + ${result.nounCount}"></p>

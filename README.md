@@ -13,6 +13,6 @@ Step 2: Run the SpringBoot application in the IDE and the output file will have 
 
 To take input from front-end :
 Step 1: Run the SpringBoot application.
-Step 2: On your browser type "https://localhost/9090/getInput".
+Step 2: On your browser type "http://localhost:9090/getInput".
 Step 3: Input your text to analyse and click "Submit".
 STep 4: Output is displayed on the browser.

@@ -13,7 +13,7 @@
 	<artifactId>core-NLP-miniProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>core-NLP-miniProject</name>
-	<description>core nlp mini project</description>
+	<description>core NLP mini project</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -49,7 +49,6 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -58,5 +57,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

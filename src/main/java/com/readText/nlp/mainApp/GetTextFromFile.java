@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 /**
+ * @author Samiksha Deshmukh
  * Class to read text from file and then write the output in the output file.
  */
 public class GetTextFromFile {
@@ -30,11 +31,12 @@ public class GetTextFromFile {
     private static void WriteResultInFile(Result result) {
         try {
             FileWriter myWriter = new FileWriter("Output.txt");
-            myWriter.write(" Text Analysis Report: \n \n" +
-                            " Sentence Count: "+ result.getSentenceCount()+
-                            "\n Word Count: "+ result.getWordCount()+
-                            "\n Noun Count: "+ result.getNounCount()+
-                            "\n Verb Count: "+ result.getVerbCount()+"\n");
+            myWriter.write("Text Analysis Report: \n \n" +
+                            "Text analysed : " + result.getText()+
+                            "\n Sentence Count: "+ result.getSentenceCount()+
+                            "\nWord Count: "+ result.getWordCount()+
+                            "\nNoun Count: "+ result.getNounCount()+
+                            "\nVerb Count: "+ result.getVerbCount()+"\n");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {

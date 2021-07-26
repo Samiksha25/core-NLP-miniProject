@@ -8,8 +8,8 @@ import edu.stanford.nlp.util.CoreMap;
 
 import java.util.List;
 import java.util.Properties;
-
 /**
+ * @author Samiksha Deshmukh
  * Class to process the input text data
  */
 public class ProcessText {
