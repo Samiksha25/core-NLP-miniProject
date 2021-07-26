@@ -3,7 +3,7 @@
 <head>
     <script>
         function validateForm() {
-          var x = document.forms["myForm"]["textField"].value;
+          var x = document.forms["myForm"]["text"].value;
           if (x == "" || x == null) {
             alert("Text must be filled out.");
             return false;
@@ -20,7 +20,7 @@
     </textArea>
     </p>
     <br>
-    <button type="submit" formaction="/getOutput" onsubmit="validateForm">Submit to output</button>
+    <button type="submit" formaction="/getOutput" onclick="validateForm()">Submit to output</button>
 </form>
 </body>
 </html>
