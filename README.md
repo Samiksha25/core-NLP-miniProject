@@ -6,4 +6,13 @@ ProcessText.java: Uses the Standford Core NLP funtions to analyse the text and p
 GetTextFromFile: Takes text input from a file calles "Input" and class the ProcessText.java to analyse the text and writes the output in "Output" text file.
 MainController.java: Takes text input from the simple front-end, calls the ProcessText.java to analyse the text and publishes the output on front-end.
 
+To read a file from location and write output ina text file:
+(currently set at the project directory ...\core-NLP-miniProject\Input)
+Step 1: Append the ...\core-NLP-miniProject\Input file with your contents.
+Step 2: Run the SpringBoot application in the IDE and the output file will have the analysis results at ..\core-NLP-miniProject\Output.
 
+To take input from front-end :
+Step 1: Run the SpringBoot application.
+Step 2: On your browser type "https://localhost/9090/getInput".
+Step 3: Input your text to analyse and click "Submit".
+STep 4: Output is displayed on the browser.
