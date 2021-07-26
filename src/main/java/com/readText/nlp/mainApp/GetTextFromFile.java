@@ -26,6 +26,7 @@ public class GetTextFromFile {
      * Writes the result output to a text file
      * @param result the Result object
      */
+
     private static void WriteResultInFile(Result result) {
         try {
             FileWriter myWriter = new FileWriter("Output.txt");
@@ -48,6 +49,7 @@ public class GetTextFromFile {
      * @param result the Result object
      * @throws FileNotFoundException Exception thrown when file is not available
      */
+
     public static void ReadFromFile(String filePath, Result result) throws FileNotFoundException {
         StringBuilder contentBuilder = new StringBuilder();
 
