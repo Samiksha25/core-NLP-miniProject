@@ -30,5 +30,5 @@ Front-end Empty TextArea Validation Form:
 Text File Output: 
 ![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Text%20file%20Output.PNG)
 
-COnsole Output:
+Console Output:
 ![alt text](https://github.com/Samiksha25/core-NLP-miniProject/blob/master/Images/Console%20Output.PNG)
